@@ -1,0 +1,128 @@
+2023-11-07 00:21:45,004 - main - INFO - --- shutdown App ---
+2024-05-14 12:46:32,618 - main - INFO - ---Starting App---
+2024-05-14 12:46:55,714 - main - INFO - Root endpoint was called
+2024-05-14 12:47:09,618 - main - INFO - Root endpoint was called
+2024-05-14 12:50:45,240 - main - INFO - Root endpoint was called
+2024-05-14 12:50:45,814 - main - INFO - Root endpoint was called
+2024-05-14 12:50:46,212 - main - INFO - Root endpoint was called
+2024-05-14 12:50:46,425 - main - INFO - Root endpoint was called
+2024-05-14 12:50:46,599 - main - INFO - Root endpoint was called
+2024-05-14 12:50:46,837 - main - INFO - Root endpoint was called
+2024-05-14 12:52:28,506 - main - INFO - Ping endpoint was called
+2024-05-14 12:55:44,664 - main - INFO - Input request received...
+2024-05-14 12:55:44,698 - main - INFO - Input as a dataframe
+|    |   device_id |   battery_power |   blue |   clock_speed |   dual_sim |   fc |   four_g |   int_memory |   m_dep |   mobile_wt |   n_cores |   pc |   px_height |   px_width |   ram |   sc_h |   sc_w |   talk_time |   three_g |   touch_screen |   wifi |
+|---:|------------:|----------------:|-------:|--------------:|-----------:|-----:|---------:|-------------:|--------:|------------:|----------:|-----:|------------:|-----------:|------:|-------:|-------:|------------:|----------:|---------------:|-------:|
+|  0 |           1 |            2000 |      0 |         10000 |          0 |    0 |        0 |            0 |       0 |           0 |         1 |    0 |           0 |          0 |  4000 |    100 |     80 |         300 |         0 |              0 |      0 |
+
+2024-05-14 12:55:44,721 - main - INFO - Predictions made
+|    |   device_id |   predicted_price |
+|---:|------------:|------------------:|
+|  0 |           1 |                 3 |
+
+2024-05-14 13:06:25,177 - main - INFO - ---Starting App---
+2024-05-14 13:06:55,533 - main - INFO - Input request received...
+2024-05-14 13:06:55,578 - main - INFO - Input as a dataframe
+|    |   device_id |   battery_power |   blue |   clock_speed |   dual_sim |   fc |   four_g |   int_memory |   m_dep |   mobile_wt |   n_cores |   pc |   px_height |   px_width |   ram |   sc_h |   sc_w |   talk_time |   three_g |   touch_screen |   wifi |
+|---:|------------:|----------------:|-------:|--------------:|-----------:|-----:|---------:|-------------:|--------:|------------:|----------:|-----:|------------:|-----------:|------:|-------:|-------:|------------:|----------:|---------------:|-------:|
+|  0 |           1 |            2000 |      0 |         10000 |          0 |    0 |        0 |            4 |       0 |           0 |         1 |    0 |           1 |          1 |  4000 |    100 |     80 |         300 |         0 |              0 |      0 |
+
+2024-05-14 13:06:55,597 - main - INFO - Predictions made
+[{'device_id': 1, 'predicted_price': 3}]
+
+2024-05-14 13:06:55,599 - main - INFO - [{'device_id': 1, 'battery_power': 2000.0, 'blue': 0, 'clock_speed': 10000.0, 'dual_sim': 0, 'fc': 0.0, 'four_g': 0, 'int_memory': 4.0, 'm_dep': 0.0, 'mobile_wt': 0.0, 'n_cores': 1.0, 'pc': 0.0, 'px_height': 1.0, 'px_width': 1.0, 'ram': 4000.0, 'sc_h': 100.0, 'sc_w': 80.0, 'talk_time': 300.0, 'three_g': 0, 'touch_screen': 0, 'wifi': 0, 'predicted_price': 3}]
+2024-05-14 13:07:01,672 - main - INFO - Input request received...
+2024-05-14 13:07:01,677 - main - INFO - Input as a dataframe
+|    |   device_id |   battery_power |   blue |   clock_speed |   dual_sim |   fc |   four_g |   int_memory |   m_dep |   mobile_wt |   n_cores |   pc |   px_height |   px_width |   ram |   sc_h |   sc_w |   talk_time |   three_g |   touch_screen |   wifi |
+|---:|------------:|----------------:|-------:|--------------:|-----------:|-----:|---------:|-------------:|--------:|------------:|----------:|-----:|------------:|-----------:|------:|-------:|-------:|------------:|----------:|---------------:|-------:|
+|  0 |           1 |            2000 |      0 |         10000 |          0 |    0 |        0 |            4 |       0 |           0 |         1 |    0 |           1 |          1 |  4000 |    100 |     80 |         300 |         0 |              0 |      0 |
+
+2024-05-14 13:07:01,695 - main - INFO - Predictions made
+[{'device_id': 1, 'predicted_price': 3}]
+
+2024-05-14 13:07:01,696 - main - INFO - [{'device_id': 1, 'battery_power': 2000.0, 'blue': 0, 'clock_speed': 10000.0, 'dual_sim': 0, 'fc': 0.0, 'four_g': 0, 'int_memory': 4.0, 'm_dep': 0.0, 'mobile_wt': 0.0, 'n_cores': 1.0, 'pc': 0.0, 'px_height': 1.0, 'px_width': 1.0, 'ram': 4000.0, 'sc_h': 100.0, 'sc_w': 80.0, 'talk_time': 300.0, 'three_g': 0, 'touch_screen': 0, 'wifi': 0, 'predicted_price': 3}]
+2024-05-14 13:07:02,401 - main - INFO - Input request received...
+2024-05-14 13:07:02,407 - main - INFO - Input as a dataframe
+|    |   device_id |   battery_power |   blue |   clock_speed |   dual_sim |   fc |   four_g |   int_memory |   m_dep |   mobile_wt |   n_cores |   pc |   px_height |   px_width |   ram |   sc_h |   sc_w |   talk_time |   three_g |   touch_screen |   wifi |
+|---:|------------:|----------------:|-------:|--------------:|-----------:|-----:|---------:|-------------:|--------:|------------:|----------:|-----:|------------:|-----------:|------:|-------:|-------:|------------:|----------:|---------------:|-------:|
+|  0 |           1 |            2000 |      0 |         10000 |          0 |    0 |        0 |            4 |       0 |           0 |         1 |    0 |           1 |          1 |  4000 |    100 |     80 |         300 |         0 |              0 |      0 |
+
+2024-05-14 13:07:02,425 - main - INFO - Predictions made
+[{'device_id': 1, 'predicted_price': 3}]
+
+2024-05-14 13:07:02,427 - main - INFO - [{'device_id': 1, 'battery_power': 2000.0, 'blue': 0, 'clock_speed': 10000.0, 'dual_sim': 0, 'fc': 0.0, 'four_g': 0, 'int_memory': 4.0, 'm_dep': 0.0, 'mobile_wt': 0.0, 'n_cores': 1.0, 'pc': 0.0, 'px_height': 1.0, 'px_width': 1.0, 'ram': 4000.0, 'sc_h': 100.0, 'sc_w': 80.0, 'talk_time': 300.0, 'three_g': 0, 'touch_screen': 0, 'wifi': 0, 'predicted_price': 3}]
+2024-05-14 13:07:03,101 - main - INFO - Input request received...
+2024-05-14 13:07:03,132 - main - INFO - Input as a dataframe
+|    |   device_id |   battery_power |   blue |   clock_speed |   dual_sim |   fc |   four_g |   int_memory |   m_dep |   mobile_wt |   n_cores |   pc |   px_height |   px_width |   ram |   sc_h |   sc_w |   talk_time |   three_g |   touch_screen |   wifi |
+|---:|------------:|----------------:|-------:|--------------:|-----------:|-----:|---------:|-------------:|--------:|------------:|----------:|-----:|------------:|-----------:|------:|-------:|-------:|------------:|----------:|---------------:|-------:|
+|  0 |           1 |            2000 |      0 |         10000 |          0 |    0 |        0 |            4 |       0 |           0 |         1 |    0 |           1 |          1 |  4000 |    100 |     80 |         300 |         0 |              0 |      0 |
+
+2024-05-14 13:07:03,145 - main - INFO - Predictions made
+[{'device_id': 1, 'predicted_price': 3}]
+
+2024-05-14 13:07:03,146 - main - INFO - [{'device_id': 1, 'battery_power': 2000.0, 'blue': 0, 'clock_speed': 10000.0, 'dual_sim': 0, 'fc': 0.0, 'four_g': 0, 'int_memory': 4.0, 'm_dep': 0.0, 'mobile_wt': 0.0, 'n_cores': 1.0, 'pc': 0.0, 'px_height': 1.0, 'px_width': 1.0, 'ram': 4000.0, 'sc_h': 100.0, 'sc_w': 80.0, 'talk_time': 300.0, 'three_g': 0, 'touch_screen': 0, 'wifi': 0, 'predicted_price': 3}]
+2024-05-14 14:24:17,203 - main - INFO - Input request received...
+2024-05-14 14:24:17,242 - main - INFO - Input as a dataframe
+|    |   device_id |   battery_power |   blue |   clock_speed |   dual_sim |   fc |   four_g |   int_memory |   m_dep |   mobile_wt |   n_cores |   pc |   px_height |   px_width |   ram |   sc_h |   sc_w |   talk_time |   three_g |   touch_screen |   wifi |
+|---:|------------:|----------------:|-------:|--------------:|-----------:|-----:|---------:|-------------:|--------:|------------:|----------:|-----:|------------:|-----------:|------:|-------:|-------:|------------:|----------:|---------------:|-------:|
+|  0 |           1 |            7000 |      0 |         10000 |          0 |    0 |        0 |            4 |       0 |           0 |         1 |    0 |           1 |          1 |  4000 |    100 |     80 |         300 |         0 |              1 |      0 |
+
+2024-05-14 14:24:17,258 - main - INFO - Predictions made
+[{'device_id': 1, 'predicted_price': 3}]
+
+2024-05-14 14:24:17,259 - main - INFO - [{'device_id': 1, 'battery_power': 7000.0, 'blue': 0, 'clock_speed': 10000.0, 'dual_sim': 0, 'fc': 0.0, 'four_g': 0, 'int_memory': 4.0, 'm_dep': 0.0, 'mobile_wt': 0.0, 'n_cores': 1.0, 'pc': 0.0, 'px_height': 1.0, 'px_width': 1.0, 'ram': 4000.0, 'sc_h': 100.0, 'sc_w': 80.0, 'talk_time': 300.0, 'three_g': 0, 'touch_screen': 1, 'wifi': 0, 'predicted_price': 3}]
+2024-05-14 14:24:22,996 - main - INFO - Input request received...
+2024-05-14 14:24:23,009 - main - INFO - Input as a dataframe
+|    |   device_id |   battery_power |   blue |   clock_speed |   dual_sim |   fc |   four_g |   int_memory |   m_dep |   mobile_wt |   n_cores |   pc |   px_height |   px_width |   ram |   sc_h |   sc_w |   talk_time |   three_g |   touch_screen |   wifi |
+|---:|------------:|----------------:|-------:|--------------:|-----------:|-----:|---------:|-------------:|--------:|------------:|----------:|-----:|------------:|-----------:|------:|-------:|-------:|------------:|----------:|---------------:|-------:|
+|  0 |           1 |            7000 |      0 |         10000 |          0 |    0 |        0 |            4 |       0 |           0 |         1 |    0 |           1 |          1 |  8000 |    100 |     80 |         300 |         0 |              1 |      0 |
+
+2024-05-14 14:24:23,023 - main - INFO - Predictions made
+[{'device_id': 1, 'predicted_price': 3}]
+
+2024-05-14 14:24:23,025 - main - INFO - [{'device_id': 1, 'battery_power': 7000.0, 'blue': 0, 'clock_speed': 10000.0, 'dual_sim': 0, 'fc': 0.0, 'four_g': 0, 'int_memory': 4.0, 'm_dep': 0.0, 'mobile_wt': 0.0, 'n_cores': 1.0, 'pc': 0.0, 'px_height': 1.0, 'px_width': 1.0, 'ram': 8000.0, 'sc_h': 100.0, 'sc_w': 80.0, 'talk_time': 300.0, 'three_g': 0, 'touch_screen': 1, 'wifi': 0, 'predicted_price': 3}]
+2024-05-14 15:22:24,518 - main - INFO - ---Starting App---
+2024-05-14 16:28:50,209 - main - INFO - Ping endpoint was called
+2024-05-14 16:29:01,706 - main - INFO - Ping endpoint was called
+2024-05-14 16:29:08,981 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:12,465 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:14,543 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:15,606 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:16,617 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:17,780 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:18,800 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:19,815 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:21,017 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:22,221 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:23,497 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:24,872 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:26,327 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:28,595 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:29,962 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:31,466 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:32,863 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:33,962 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:35,319 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:36,751 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:37,841 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:39,060 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:40,437 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:41,576 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:42,777 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:44,039 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:45,336 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:46,525 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:47,747 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:49,001 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:50,044 - main - INFO - Ping endpoint was called
+2024-05-14 16:31:51,095 - main - INFO - Ping endpoint was called
+2024-05-14 16:38:20,678 - main - INFO - Ping endpoint was called
+2024-05-14 16:38:22,295 - main - INFO - Ping endpoint was called
+2024-05-14 16:38:24,403 - main - INFO - Ping endpoint was called
+2024-05-14 16:38:25,824 - main - INFO - Ping endpoint was called
+2024-05-14 16:38:27,614 - main - INFO - Ping endpoint was called
+2024-05-14 16:38:29,725 - main - INFO - Ping endpoint was called
+2024-05-14 16:38:31,326 - main - INFO - Ping endpoint was called
+2024-05-14 16:38:33,156 - main - INFO - Ping endpoint was called
+2024-05-14 16:38:35,008 - main - INFO - Ping endpoint was called
+2024-05-14 16:38:36,257 - main - INFO - Ping endpoint was called

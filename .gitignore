@@ -1,5 +1,11 @@
 venv/
 **checkpoint*
 .DS_Store
+__pycache__/
+/src/logs/fastapi-elk-stack.log
+.env
 command.txt
 notebooks/test.ipynb
+./draft
+./fastapi-logs/*
+setup.sh

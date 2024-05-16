@@ -1,0 +1,116 @@
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.13.4
+    ports:
+      - "9200:9200"
+    environment:
+      - discovery.type=single-node
+      - ELASTIC_USERNAME=${ELASTIC_USERNAME}
+      - ELASTIC_PASSWORD=${ELASTIC_PASSWORD}
+      - xpack.security.enabled=true
+      - xpack.security.transport.ssl.enabled=true
+      - xpack.security.transport.ssl.verification_mode=certificate
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.13.4
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch
+    environment:
+      - ELASTICSEARCH_HOSTS=https://elasticsearch:9200
+      - ELASTICSEARCH_USERNAME=${ELASTIC_USERNAME}
+      - ELASTICSEARCH_PASSWORD=${ELASTIC_PASSWORD}
+      - ELASTICSEARCH_SSL_VERIFICATIONMODE=certificate
+
+  filebeat:
+    user: root
+    build:
+        context: ./filebeat
+    # container_name: filebeat
+    volumes:
+        - ./fastapi-logs:/src/logs
+        - ./filebeat:/usr/share/filebeat
+        - /var/lib/docker/containers:/var/lib/docker/containers:ro
+        - /var/run/docker.sock:/var/run/docker.sock:ro
+    depends_on:
+        - elasticsearch
+        - kibana
+    environment:
+      - ELASTICSEARCH_HOSTS=https://elasticsearch:9200
+      - ELASTICSEARCH_USERNAME=${ELASTIC_USERNAME}
+      - ELASTICSEARCH_PASSWORD=${ELASTIC_PASSWORD}
+      - ELASTICSEARCH_SSL_VERIFICATIONMODE=certificate
+
+volumes:
+    elasticsearch_data:
+        driver: local
+
+########
+# services:
+#   elasticsearch:
+#     image: docker.elastic.co/elasticsearch/elasticsearch:8.13.4
+#     ports:
+#       - "9200:9200"
+#     environment:
+#       - discovery.type=single-node
+#       - xpack.security.enabled=true
+#       - xpack.security.transport.ssl.enabled=true
+#       - ELASTIC_PASSWORD=${ELASTIC_PASSWORD}
+#     volumes:
+#       - elasticsearch_data:/usr/share/elasticsearch/data
+#     networks:
+#       - elk
+
+#   kibana:
+#     image: docker.elastic.co/kibana/kibana:8.13.4
+#     ports:
+#       - "5601:5601"
+#     depends_on:
+#       - elasticsearch
+#     environment:
+#       - ELASTICSEARCH_HOSTS=https://elasticsearch:9200
+#       - ELASTICSEARCH_SERVICE_ACCOUNT_TOKEN=${KIBANA_SERVICE_ACCOUNT_TOKEN}
+#       - ELASTICSEARCH_SSL_VERIFICATIONMODE=none
+#     networks:
+#       - elk
+
+#   filebeat:
+#     build:
+#       context: ./filebeat
+#     container_name: filebeat
+#     volumes:
+#       - ./fastapi-logs:/src/logs
+#       - /var/lib/docker/containers:/var/lib/docker/containers:ro
+#       - /var/run/docker.sock:/var/run/docker.sock:ro
+#     depends_on:
+#       - elasticsearch
+#       - kibana
+#     environment:
+#       - ELASTIC_USERNAME=elastic
+#       - ELASTIC_PASSWORD=${ELASTIC_PASSWORD}
+#     networks:
+#       - elk
+
+#   fastapi:
+#     build:
+#       context: ./fastapi-app 
+#       dockerfile: Dockerfile
+#     ports:
+#       - "8888:8888"
+#     depends_on:
+#       - elasticsearch
+#     volumes:
+#       - ./fastapi-logs:/src/logs
+#     networks:
+#       - elk
+
+# volumes:
+#   elasticsearch_data:
+#     driver: local
+
+# networks:
+#   elk:
+#     driver: bridge

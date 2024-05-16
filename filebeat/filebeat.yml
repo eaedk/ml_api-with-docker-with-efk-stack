@@ -1,0 +1,26 @@
+name: "fastapi-app-filebeat"
+# logging.metrics.enabled: false
+# xpack.security.enabled: true
+# xpack.monitoring.enabled: false
+# setup.ilm.enabled: false
+# setup.template.enabled: false
+
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - /src/logs/fastapi*
+    - /src/logs/laravel*
+  fields:
+    service: fastapi-app_
+  fields_under_root: true
+
+output.elasticsearch:
+  hosts: [ "http://elasticsearch:9200" ] 
+  protocol: "https"
+  username: "${ELASTICSEARCH_USERNAME}"
+  password: "${ELASTICSEARCH_PASSWORD}"
+  ssl.verification_mode: "none"
+  indices:
+    - index: "fastapi-APP"
+    - index: "laravel"
